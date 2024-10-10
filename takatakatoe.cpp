@@ -1,65 +1,39 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
-//intialize functions
 
-void printBoard(int board[3][3]);
+void printBoard(char board[3][3]);
 
-/*void printBoard(char board[3][3]){
-  cout << "a \t b \t c";
-  for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 3; j++){
-      board[i][j] = ' - ';
-   
+void clearBoard(char (&board[3][3]);
 
-  }
+bool checkWin(char board[3][3], char player);
 
-  }*/
-
-
-
+bool checkTie(char board[3][3]);
 
 
 int main(){
 
-  char board[3][3];
-  int X_WINS = 0;
-  int O_WINS = 0;
-  char player = 'X';
-  bool stillPlaying  = true;
-  char row;
-  char col;
-    
-    cout << "Player " << player << ", enter your row (1, 2, 3): ";
-    cin >> row;
 
+  char board[3][3] = {{-, -, -}, {-, -, -}, {-, -, -}};
+  int x_wins = 0;
+  int o_wins = 0;
+  int ties = 0;
+  char x_move = 'X';
+  char o_move = "O";
+  bool x_turn = false;
+  bool stillPlaying = true;
+  bool gameEnd = false;
 
-    cout << "Player " << player << ", enter your column (a, b, c): ";
-    cin >> col;
-    if (col = 'a'){
-      col = 1;
-    }else if (col = 'b'){
-      col = 2;
-    }else if (col = 'c'){
-      col = 3;
-    }else{
-      cout << "Please enter a valid character for column (a, b or c)";
-	cin >> col;
-    }
+  //while stillplaying
+  cout << "Welcome to TicTacToe!" << endl;
+  x_turn = true;
+  
+  
 
   return 0;
 
 }
 
-
-void printBoard(int board[3][3]){
-  cout << "a \t b \t c";
-  for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 3; j++){
-      //      board[i][j] = '  ';
-    }
-
-  }
-
-}
+		void printBoard(
